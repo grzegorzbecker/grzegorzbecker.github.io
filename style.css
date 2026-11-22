@@ -7,3 +7,22 @@
 #projekty-wlasne .feature .copy{padding:26px 30px}
 #projekty-wlasne .feature li{margin-bottom:6px}
 @media(max-width:850px){#projekty-wlasne .feature{grid-template-columns:1fr}#projekty-wlasne .feature>img{height:290px}}
+
+/* v4 */
+.publication-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.publication-item{background:var(--panel);border:1px solid var(--line);padding:17px 20px;border-radius:12px}.publication-item h3{font-size:1rem;margin:0 0 5px}.publication-item p{font-size:.84rem;color:var(--muted);margin:0}.publication-item[hidden]{display:none}.photo-placeholder{height:390px;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:12px;background:radial-gradient(circle at 50% 35%,#36505b,#1a2b34 65%);color:#d4e1e8;text-align:center;padding:25px}.photo-placeholder .placeholder-icon{border:2px solid #f29a35;border-radius:18px;color:#f29a35;font-size:3rem;font-weight:800;padding:5px 28px}.photo-placeholder span:last-child{color:var(--muted);font-size:.9rem}.card .content h3{margin-top:0}@media(max-width:700px){.publication-list{grid-template-columns:1fr}.photo-placeholder{height:280px}}
+
+/* v5 — image-led publication cards, as in the preferred screenshot */
+.publication-list{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.publication-item{padding:0;overflow:hidden;border-radius:15px;display:flex;flex-direction:column}
+.publication-thumb{display:block;width:100%;height:205px;object-fit:cover;object-position:center 18%;background:#f7f7f7}
+.publication-noimage{height:205px;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#233945,#10212b);color:#bdcbd4;font-size:.9rem}
+.publication-content{padding:19px 20px 22px;flex:1}
+.publication-content .tag{display:block;color:#ffad56;font-size:.75rem;line-height:1.45;margin:0 0 11px}
+.publication-item h3{font-size:1.14rem;line-height:1.4;margin:0 0 9px}
+.publication-item p{font-size:.92rem;line-height:1.65;color:#b8c9d4;margin:0}
+/* show more of the article on the home page instead of an extreme close-up */
+#publikacje .card img{height:205px;object-fit:cover;object-position:center 18%}
+@media(max-width:850px){.publication-list{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:550px){.publication-list{grid-template-columns:1fr}}
+
+.publication-thumb{object-position:center 22%}
